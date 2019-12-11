@@ -1,0 +1,4 @@
+application:
+  port: 8080
+  works: works
+  token: ${VAULT_TOKEN}
