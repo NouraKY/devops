@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.core.env.Environment;
@@ -12,10 +14,13 @@ import org.springframework.core.env.Environment;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-@SpringBootApplication
-@ConfigurationPropertiesScan("com.elm.devops.devops.config")
+//@ConfigurationPropertiesScan("com.elm.devops.devops.config")
+//@EnableConfigurationProperties(ConfigProperties.class)
 
-@EnableConfigurationProperties(ConfigProperties.class)
+
+@SpringBootApplication(scanBasePackages = "com.elm.devops.devops",
+		exclude = {DataSourceAutoConfiguration.class, XADataSourceAutoConfiguration.class})
+
 public class DevopsApplication {
 	private static final Logger log = LoggerFactory.getLogger(DevopsApplication.class);
 
@@ -42,7 +47,6 @@ public class DevopsApplication {
 			log.warn("The host name could not be determined, using `localhost` as fallback");
 		}
 		log.info("application running on port :{}" , env.getProperty("application.port"));
-		log.info("token :{}" , env.getProperty("application.token"));
 
 
 	}
