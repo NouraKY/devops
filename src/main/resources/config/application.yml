@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    database: SQL_SERVER
+    show-sql: true
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;database=devops
+    username: devops
+    password: Aa12345678
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    #outputChangeLogFile: src/main/resources/db/changelog/liquibase-outputChangeLog.xml
+    #url: jdbc:sqlserver://localhost:1433;database=devops
+    #username: devops
+    #password: Aa12345678
+server:
+  port: 8080
+
+
