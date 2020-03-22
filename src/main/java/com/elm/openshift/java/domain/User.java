@@ -1,4 +1,4 @@
-package com.elm.devops.devops.domain;
+package com.elm.openshift.java.domain;
 
 
 import javax.persistence.*;

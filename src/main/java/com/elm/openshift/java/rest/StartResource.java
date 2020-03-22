@@ -1,9 +1,8 @@
-package com.elm.devops.devops.rest;
+package com.elm.openshift.java.rest;
 
 
-import com.elm.devops.devops.domain.User;
-import com.elm.devops.devops.dto.HelloDTO;
-import com.elm.devops.devops.service.UserService;
+import com.elm.openshift.java.dto.HelloDTO;
+import com.elm.openshift.java.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

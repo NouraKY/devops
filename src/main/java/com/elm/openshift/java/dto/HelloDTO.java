@@ -1,4 +1,4 @@
-package com.elm.devops.devops.dto;
+package com.elm.openshift.java.dto;
 
 import java.io.Serializable;
 

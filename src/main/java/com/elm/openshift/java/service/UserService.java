@@ -1,7 +1,7 @@
-package com.elm.devops.devops.service;
+package com.elm.openshift.java.service;
 
-import com.elm.devops.devops.domain.User;
-import com.elm.devops.devops.repository.UserRepository;
+import com.elm.openshift.java.domain.User;
+import com.elm.openshift.java.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

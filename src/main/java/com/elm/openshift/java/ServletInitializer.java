@@ -1,9 +1,7 @@
-package com.elm.devops.devops;
+package com.elm.openshift.java;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 public class ServletInitializer extends SpringBootServletInitializer {
 

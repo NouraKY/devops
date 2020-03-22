@@ -1,4 +1,4 @@
-package com.elm.devops.devops.config;
+package com.elm.openshift.java.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
