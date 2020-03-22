@@ -25,7 +25,7 @@
 	<groupId>com.elm.devops</groupId>
 	<artifactId>devops</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>devops</name>
 	<description>devops project for Spring Boot</description>
 
@@ -217,7 +217,7 @@
 				</executions>
 			</plugin>-->
 
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${maven-war-plugin.version}</version>
@@ -242,8 +242,22 @@
 						</resource>
 					</webResources>
 				</configuration>
-			</plugin>
+			</plugin>-->
 
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.elm.openshift.java.DevopsApplication</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
 		</plugins>
 	</build>
