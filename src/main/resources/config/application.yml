@@ -3,9 +3,9 @@ spring:
     database: SQL_SERVER
     show-sql: true
   datasource:
-    url: jdbc:sqlserver://localhost:1433;database=devops
-    username: devops
-    password: Aa12345678
+    url: jdbc:sqlserver://10.33.4.16:1433;database=java_sample
+    username: galofisan
+    password: Arch@123
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     #outputChangeLogFile: src/main/resources/db/changelog/liquibase-outputChangeLog.xml
